@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "KPengRequestMethod.h"
 @interface ReqAPI : NSObject
-- (void)test;
++ (void)test;
 @end

@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [ReqAPI test];
     // Do any additional setup after loading the view.
 }
 

@@ -11,7 +11,7 @@
 #import <KPengUtils/Classes/KPengNormal/ConfigInfo.h>
 
 @implementation ReqAPI
-- (void)test {
++ (void)test {
     NSLog(@"123");
     
 }

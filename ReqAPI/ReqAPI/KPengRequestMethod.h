@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import <KPengUtils/Classes/KPengNormal/ConfigInfo.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MJExtension/MJExtension.h>
 
