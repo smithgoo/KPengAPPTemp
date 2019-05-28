@@ -1,0 +1,71 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - KPengUtils (0.0.1):
+    - AFNetworking (~> 3.1.0)
+    - KPengUtils/KPengCategories (= 0.0.1)
+    - KPengUtils/KPengcodeView (= 0.0.1)
+    - KPengUtils/KPengCountDown (= 0.0.1)
+    - KPengUtils/KPengm3u8PlayandDown (= 0.0.1)
+    - KPengUtils/KPengNormal (= 0.0.1)
+    - KPengUtils/KPengPaintView (= 0.0.1)
+    - KPengUtils/KPengSongwords (= 0.0.1)
+  - KPengUtils/KPengCategories (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - KPengUtils/KPengcodeView (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - KPengUtils/KPengCountDown (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - KPengUtils/KPengm3u8PlayandDown (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - KPengUtils/KPengNormal (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - KPengUtils/KPengPaintView (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - KPengUtils/KPengSongwords (0.0.1):
+    - AFNetworking (~> 3.1.0)
+  - MJExtension (3.0.17)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - KPengUtils (from `https://github.com/smithgoo/KPengUtils.git`)
+  - MJExtension
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - MJExtension
+    - SVProgressHUD
+
+EXTERNAL SOURCES:
+  KPengUtils:
+    :git: https://github.com/smithgoo/KPengUtils.git
+
+CHECKOUT OPTIONS:
+  KPengUtils:
+    :commit: 955554f2d2f7353fc4df71e8b565d2d5696caf90
+    :git: https://github.com/smithgoo/KPengUtils.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  KPengUtils: 42bddc99d7cb1c88bbe55a51275c807026d5ddfc
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 9f3dc3a9139449b451425d17cccf8863a09a9f88
+
+COCOAPODS: 1.6.0.beta.2

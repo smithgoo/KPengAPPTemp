@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15ADC336FE38F02525F069AD /* libPods-KpengTemp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC49EA30A1A469C0A3746716 /* libPods-KpengTemp.a */; };
+		AA92A709229D16C900F0B12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA92A708229D16C900F0B12E /* AppDelegate.m */; };
+		AA92A70C229D16C900F0B12E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA92A70B229D16C900F0B12E /* ViewController.m */; };
+		AA92A70F229D16C900F0B12E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA92A70D229D16C900F0B12E /* Main.storyboard */; };
+		AA92A711229D16CA00F0B12E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA92A710229D16CA00F0B12E /* Assets.xcassets */; };
+		AA92A714229D16CA00F0B12E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA92A712229D16CA00F0B12E /* LaunchScreen.storyboard */; };
+		AA92A717229D16CA00F0B12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA92A716229D16CA00F0B12E /* main.m */; };
+		AA92A733229D181C00F0B12E /* libReqAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA92A732229D181C00F0B12E /* libReqAPI.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DC418EB073ED428AFA3D0B2 /* Pods-KpengTemp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KpengTemp.debug.xcconfig"; path = "Target Support Files/Pods-KpengTemp/Pods-KpengTemp.debug.xcconfig"; sourceTree = "<group>"; };
+		AA92A704229D16C900F0B12E /* KpengTemp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KpengTemp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA92A707229D16C900F0B12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA92A708229D16C900F0B12E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA92A70A229D16C900F0B12E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AA92A70B229D16C900F0B12E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AA92A70E229D16C900F0B12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA92A710229D16CA00F0B12E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA92A713229D16CA00F0B12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA92A715229D16CA00F0B12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA92A716229D16CA00F0B12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA92A732229D181C00F0B12E /* libReqAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReqAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6163023FE9287AF8CC8484C /* Pods-KpengTemp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KpengTemp.release.xcconfig"; path = "Target Support Files/Pods-KpengTemp/Pods-KpengTemp.release.xcconfig"; sourceTree = "<group>"; };
+		FC49EA30A1A469C0A3746716 /* libPods-KpengTemp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KpengTemp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA92A701229D16C900F0B12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15ADC336FE38F02525F069AD /* libPods-KpengTemp.a in Frameworks */,
+				AA92A733229D181C00F0B12E /* libReqAPI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BEA994E00FBEA834CBD15D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC49EA30A1A469C0A3746716 /* libPods-KpengTemp.a */,
+				AA92A732229D181C00F0B12E /* libReqAPI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA92A6FB229D16C900F0B12E = {
+			isa = PBXGroup;
+			children = (
+				AA92A706229D16C900F0B12E /* KpengTemp */,
+				AA92A705229D16C900F0B12E /* Products */,
+				EB8B13A05E8893A0CD16BDA2 /* Pods */,
+				5BEA994E00FBEA834CBD15D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA92A705229D16C900F0B12E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA92A704229D16C900F0B12E /* KpengTemp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA92A706229D16C900F0B12E /* KpengTemp */ = {
+			isa = PBXGroup;
+			children = (
+				AA92A707229D16C900F0B12E /* AppDelegate.h */,
+				AA92A708229D16C900F0B12E /* AppDelegate.m */,
+				AA92A70A229D16C900F0B12E /* ViewController.h */,
+				AA92A70B229D16C900F0B12E /* ViewController.m */,
+				AA92A70D229D16C900F0B12E /* Main.storyboard */,
+				AA92A710229D16CA00F0B12E /* Assets.xcassets */,
+				AA92A712229D16CA00F0B12E /* LaunchScreen.storyboard */,
+				AA92A715229D16CA00F0B12E /* Info.plist */,
+				AA92A716229D16CA00F0B12E /* main.m */,
+			);
+			path = KpengTemp;
+			sourceTree = "<group>";
+		};
+		EB8B13A05E8893A0CD16BDA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DC418EB073ED428AFA3D0B2 /* Pods-KpengTemp.debug.xcconfig */,
+				B6163023FE9287AF8CC8484C /* Pods-KpengTemp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA92A703229D16C900F0B12E /* KpengTemp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA92A71A229D16CA00F0B12E /* Build configuration list for PBXNativeTarget "KpengTemp" */;
+			buildPhases = (
+				C8B8D4033EAB7B2F044F60DB /* [CP] Check Pods Manifest.lock */,
+				AA92A700229D16C900F0B12E /* Sources */,
+				AA92A701229D16C900F0B12E /* Frameworks */,
+				AA92A702229D16C900F0B12E /* Resources */,
+				5BDDB64DDD85CCC29C78AFFC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KpengTemp;
+			productName = KpengTemp;
+			productReference = AA92A704229D16C900F0B12E /* KpengTemp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA92A6FC229D16C900F0B12E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "王朋";
+				TargetAttributes = {
+					AA92A703229D16C900F0B12E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = AA92A6FF229D16C900F0B12E /* Build configuration list for PBXProject "KpengTemp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA92A6FB229D16C900F0B12E;
+			productRefGroup = AA92A705229D16C900F0B12E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA92A703229D16C900F0B12E /* KpengTemp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA92A702229D16C900F0B12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA92A714229D16CA00F0B12E /* LaunchScreen.storyboard in Resources */,
+				AA92A711229D16CA00F0B12E /* Assets.xcassets in Resources */,
+				AA92A70F229D16C900F0B12E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BDDB64DDD85CCC29C78AFFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KpengTemp/Pods-KpengTemp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KPengUtils/KPengUtils.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KPengUtils.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KpengTemp/Pods-KpengTemp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B8D4033EAB7B2F044F60DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KpengTemp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA92A700229D16C900F0B12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA92A70C229D16C900F0B12E /* ViewController.m in Sources */,
+				AA92A717229D16CA00F0B12E /* main.m in Sources */,
+				AA92A709229D16C900F0B12E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA92A70D229D16C900F0B12E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA92A70E229D16C900F0B12E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA92A712229D16CA00F0B12E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA92A713229D16CA00F0B12E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA92A718229D16CA00F0B12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA92A719229D16CA00F0B12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA92A71B229D16CA00F0B12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DC418EB073ED428AFA3D0B2 /* Pods-KpengTemp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BKH4N4V2S;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/KPengUtils\"",
+					"\"$(SRCROOT)/ReqAPI/ReqAPI\"",
+				);
+				INFOPLIST_FILE = KpengTemp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = smithgoo.KpengTemp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA92A71C229D16CA00F0B12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6163023FE9287AF8CC8484C /* Pods-KpengTemp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BKH4N4V2S;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/KPengUtils\"",
+					"\"$(SRCROOT)/ReqAPI/ReqAPI\"",
+				);
+				INFOPLIST_FILE = KpengTemp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = smithgoo.KpengTemp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA92A6FF229D16C900F0B12E /* Build configuration list for PBXProject "KpengTemp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA92A718229D16CA00F0B12E /* Debug */,
+				AA92A719229D16CA00F0B12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA92A71A229D16CA00F0B12E /* Build configuration list for PBXNativeTarget "KpengTemp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA92A71B229D16CA00F0B12E /* Debug */,
+				AA92A71C229D16CA00F0B12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA92A6FC229D16C900F0B12E /* Project object */;
+}
