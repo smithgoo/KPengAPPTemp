@@ -1,0 +1,1 @@
+../../../HRCocoaTools/HRCocoaTools/Classes/Category/NSFileManager+hrExt.h

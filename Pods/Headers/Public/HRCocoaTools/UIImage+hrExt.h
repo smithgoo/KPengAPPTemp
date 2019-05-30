@@ -1,0 +1,1 @@
+../../../HRCocoaTools/HRCocoaTools/Classes/Category/UIImage+hrExt.h

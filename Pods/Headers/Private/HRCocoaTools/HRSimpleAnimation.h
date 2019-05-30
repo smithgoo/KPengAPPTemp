@@ -1,0 +1,1 @@
+../../../HRCocoaTools/HRCocoaTools/Classes/Animation/HRSimpleAnimation.h

@@ -14,6 +14,17 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HRCocoaTools (0.2.8):
+    - HRCocoaTools/Animation (= 0.2.8)
+    - HRCocoaTools/Category (= 0.2.8)
+    - HRCocoaTools/Media (= 0.2.8)
+    - HRCocoaTools/Util (= 0.2.8)
+  - HRCocoaTools/Animation (0.2.8):
+    - pop
+  - HRCocoaTools/Category (0.2.8)
+  - HRCocoaTools/Media (0.2.8)
+  - HRCocoaTools/Util (0.2.8):
+    - Reachability
   - KPengUtils (0.0.1):
     - AFNetworking (~> 3.1.0)
     - KPengUtils/KPengCategories (= 0.0.1)
@@ -38,9 +49,12 @@ PODS:
   - KPengUtils/KPengSongwords (0.0.1):
     - AFNetworking (~> 3.1.0)
   - MJExtension (3.0.17)
+  - pop (1.0.12)
+  - Reachability (3.2)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - HRCocoaTools (~> 0.2.8)
   - KPengUtils (from `https://github.com/smithgoo/KPengUtils.git`)
   - MJExtension
   - SVProgressHUD
@@ -48,7 +62,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - HRCocoaTools
     - MJExtension
+    - pop
+    - Reachability
     - SVProgressHUD
 
 EXTERNAL SOURCES:
@@ -57,15 +74,18 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   KPengUtils:
-    :commit: 955554f2d2f7353fc4df71e8b565d2d5696caf90
+    :commit: b94f2326a13d3ed790f244b5733685d87addfcae
     :git: https://github.com/smithgoo/KPengUtils.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  KPengUtils: 42bddc99d7cb1c88bbe55a51275c807026d5ddfc
+  HRCocoaTools: f4df04084ee9f456130a9bd828bbe9a1e6c763d0
+  KPengUtils: eaa7e0f3ca706c05d70ea98dd3a5832b66f69f29
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9f3dc3a9139449b451425d17cccf8863a09a9f88
+PODFILE CHECKSUM: 6017f43cad4edc7b0475c3b3494d1e84da12ae1a
 
 COCOAPODS: 1.6.0.beta.2

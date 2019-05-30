@@ -55,7 +55,8 @@ typedef NS_ENUM(NSInteger,RequestMethod) {
     RequestMethodGet =0,
     RequestMethodPost,
     RequestMethodDelete,
-    RequestMethodPut
+    RequestMethodPut,
+    RequestMethodHead
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -74,6 +75,26 @@ success:(void (^)(int code, NSString *msg, id data))success
 error:(void (^)(int code, NSString *msg))error
 failure:(void (^)(NSError *failure))failure __deprecated_msg("Use `request:mehtod:responseObjcClass:params:datas:success:failure:`");
 
++ (void)deleteData:(NSString *)url
+  parameters:(NSMutableDictionary *)parameters
+     success:(void (^)(int code, NSString *msg, id data))success
+       error:(void (^)(int code, NSString *msg))error
+     failure:(void (^)(NSError *failure))failure __deprecated_msg("Use `request:mehtod:responseObjcClass:params:datas:success:failure:`");
+
++ (void)putData:(NSString *)url
+  parameters:(NSMutableDictionary *)parameters
+     success:(void (^)(int code, NSString *msg, id data))success
+       error:(void (^)(int code, NSString *msg))error
+     failure:(void (^)(NSError *failure))failure __deprecated_msg("Use `request:mehtod:responseObjcClass:params:datas:success:failure:`");
+
++ (void)head:(NSString *)url
+  parameters:(NSMutableDictionary *)parameters
+     success:(void (^)(int code, NSString *msg, id data))success
+       error:(void (^)(int code, NSString *msg))error
+     failure:(void (^)(NSError *failure))failure __deprecated_msg("Use `request:mehtod:responseObjcClass:params:datas:success:failure:`");
+
+
+
 + (void)post:(NSString *)url
 parameters:(NSMutableDictionary *)parameters
 datas:(NSMutableDictionary *)datas
@@ -88,12 +109,6 @@ success:(void (^)(int code, NSString *msg, id data))success
 error:(void (^)(int code, NSString *msg))error
 failure:(void (^)(NSError *failure))failure;
 
-
-+ (void)deleteAction:(NSString *)url
-parameters:(NSMutableDictionary *)parameters
-success:(void (^)(int code, NSString *msg, id data))success
-error:(void (^)(int code, NSString *msg))error
-failure:(void (^)(NSError *failure))failure __deprecated_msg("Use `request:mehtod:responseObjcClass:params:datas:success:failure:`");
 
 
 @end

@@ -1,0 +1,1 @@
+../../../HRCocoaTools/HRCocoaTools/Classes/Category/NSURL+hrExt.h

@@ -1,0 +1,1 @@
+../../../HRCocoaTools/HRCocoaTools/Classes/Media/NSData+imageFormat.h

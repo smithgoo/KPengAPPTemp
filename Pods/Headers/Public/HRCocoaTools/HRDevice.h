@@ -1,0 +1,1 @@
+../../../HRCocoaTools/HRCocoaTools/Classes/Util/HRDevice.h

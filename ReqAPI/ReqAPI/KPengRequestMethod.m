@@ -11,6 +11,8 @@
 #import <KPengUtils/Classes/KPengNormal/ConfigInfo.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MJExtension/MJExtension.h>
+
+#define TIMEOUT  45
 @interface KPengRequestMethod ()
 {
         AFHTTPSessionManager *sessionManager;
@@ -18,7 +20,21 @@
 @end
 
 @implementation KPengRequestMethod
-    
+
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        sessionManager = [AFHTTPSessionManager manager];
+        [sessionManager.requestSerializer setTimeoutInterval:45];
+    }
+    return self;
+}
+
+-(AFHTTPSessionManager *)sessionManager{
+    return sessionManager;
+}
+
+
 +(instancetype)manager{
     static KPengRequestMethod *manager = nil;
     static dispatch_once_t onceToken;
@@ -48,7 +64,7 @@
         if (![self isShowLoadingViewWithURL:url]) {
             [SVProgressHUD showWithStatus:@"正在拉取数据"];
         }
-        [self request:url parameters:parameters datas:nil method:@"get" success:success error:error failure:failure];
+        [self request:url parameters:parameters datas:nil method:RequestMethodGet success:success error:error failure:failure];
     }
     
     
@@ -62,8 +78,41 @@
         if (![self isShowLoadingViewWithURL:url]) {
             [SVProgressHUD showWithStatus:@"正在拉取数据"];
         }
-        [self request:url parameters:parameters datas:nil method:@"post" success:success error:error failure:failure];
+        [self request:url parameters:parameters datas:nil method:RequestMethodPost success:success error:error failure:failure];
     }
+
++ (void)deleteData:(NSString *)url
+        parameters:(NSMutableDictionary *)parameters
+           success:(void (^)(int code, NSString *msg, id data))success
+             error:(void (^)(int code, NSString *msg))error
+           failure:(void (^)(NSError *failure))failure {
+    if (![self isShowLoadingViewWithURL:url]) {
+        [SVProgressHUD showWithStatus:@"正在拉取数据"];
+    }
+    [self request:url parameters:parameters datas:nil method:RequestMethodDelete success:success error:error failure:failure];
+}
+
++ (void)putData:(NSString *)url
+     parameters:(NSMutableDictionary *)parameters
+        success:(void (^)(int code, NSString *msg, id data))success
+          error:(void (^)(int code, NSString *msg))error
+        failure:(void (^)(NSError *failure))failure {
+    if (![self isShowLoadingViewWithURL:url]) {
+        [SVProgressHUD showWithStatus:@"正在拉取数据"];
+    }
+    [self request:url parameters:parameters datas:nil method:RequestMethodPut success:success error:error failure:failure];
+}
+
++ (void)head:(NSString *)url
+  parameters:(NSMutableDictionary *)parameters
+     success:(void (^)(int code, NSString *msg, id data))success
+       error:(void (^)(int code, NSString *msg))error
+     failure:(void (^)(NSError *failure))failure {
+    if (![self isShowLoadingViewWithURL:url]) {
+        [SVProgressHUD showWithStatus:@"正在拉取数据"];
+    }
+    [self request:url parameters:parameters datas:nil method:RequestMethodHead success:success error:error failure:failure];
+}
     
 + (void)post:(NSString *)url
   parameters:(NSMutableDictionary *)parameters
@@ -73,13 +122,13 @@
      failure:(void (^)(NSError *failure))failure
     {
         [SVProgressHUD showWithStatus:@"正在拉取数据"];
-        [self request:url parameters:parameters datas:datas method:@"post" success:success error:error failure:failure];
+        [self request:url parameters:parameters datas:datas method:RequestMethodPost success:success error:error failure:failure];
     }
     
 + (void)request:(NSString *)url
      parameters:(NSMutableDictionary *)parameters
           datas:(NSMutableDictionary *)datas
-         method:(NSString *)method
+         method:(RequestMethod)method
         success:(void (^)(int code, NSString *msg, id data))success
           error:(void (^)(int code, NSString *msg))error
         failure:(void (^)(NSError *failure))failure
@@ -101,16 +150,13 @@
         manager.securityPolicy.allowInvalidCertificates = YES;
         [manager.securityPolicy setValidatesDomainName:NO];
         
-        
         //设置请求以及响应的解析方式
-        if ([url containsString:@"/api/v1/user/logout"]||[url containsString:@"/api/v1/user/password"]||[url containsString:@"/api/v1/video/view_record"]) {
-            if ([url containsString:@"/api/v1/user/logout"]) {
+        if ([url containsString:@""]) {
+            if ([url containsString:@""]) {
                 manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
             }
             
         }
-        
-        
         url = [NSString stringWithFormat:@"%@?pn=%@&vc=%@&pltm=%@", url,[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"],[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"],@"ios"];
         if (datas != nil && datas.allKeys.count > 0) {
             [manager.requestSerializer setTimeoutInterval:45];
@@ -128,33 +174,76 @@
             }];
         }
         else {
-            if ([method isEqualToString:@"get"]) {
-                NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:url parameters:parameters error:nil];
-                request.timeoutInterval = 45; //设置超时时间
-                NSURLSessionDataTask *task = [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+            NSURLSessionDataTask *task;
+            switch (method) {
+                case RequestMethodGet:
+                {
+                    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:url parameters:parameters error:nil];
+                    request.timeoutInterval = TIMEOUT; //设置超时时间
+                    task = [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+                        
+                    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        [self doSuccess:task responseObject:responseObject success:success error:error];
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        [self doFailure:task error:error failure:failure];
+                    }];
+                  
+                }
+                    break;
+                case RequestMethodPost:
+                {
+                    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"POST" URLString:url parameters:parameters error:nil];
+                    request.timeoutInterval = TIMEOUT; //设置超时时间
+                    task = [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+                        
+                    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        [self doSuccess:task responseObject:responseObject success:success error:error];
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        [self doFailure:task error:error failure:failure];
+                    }];
+                }
+                    break;
+                case RequestMethodDelete:
+                {
+                    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"DELETE" URLString:url parameters:parameters error:nil];
+                    request.timeoutInterval = TIMEOUT; //设置超时时间
+                    task = [manager DELETE:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        [self doSuccess:task responseObject:responseObject success:success error:error];
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        [self doFailure:task error:error failure:failure];
+                    }];
+                }
+                    break;
+                case RequestMethodPut:
+                {
+                    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"PUT" URLString:url parameters:parameters error:nil];
+                    request.timeoutInterval = TIMEOUT; //设置超时时间
+                    task = [manager PUT:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        [self doSuccess:task responseObject:responseObject success:success error:error];
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        [self doFailure:task error:error failure:failure];
+                    }];
+                }
+                    break;
+                case RequestMethodHead:
+                {
+                    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"HEAD" URLString:url parameters:parameters error:nil];
+                    request.timeoutInterval = TIMEOUT; //设置超时时间
+                    task = [manager HEAD:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task) {
+                        [self doSuccess:task responseObject:nil success:success error:error];
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                        [self doFailure:task error:error failure:failure];
+                    }];
+                }
+                    break;
+               
                     
-                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    [self doSuccess:task responseObject:responseObject success:success error:error];
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    [self doFailure:task error:error failure:failure];
-                }];
-                [task resume];
+                default:
+                    break;
             }
-            else {
-                
-                NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"POST" URLString:url parameters:parameters error:nil];
-                request.timeoutInterval = 45; //设置超时时间
-                NSURLSessionDataTask *task = [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-                    
-                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    [self doSuccess:task responseObject:responseObject success:success error:error];
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    [self doFailure:task error:error failure:failure];
-                }];
-                [task resume];
-            }
+              [task resume];
         }
-    }
+}
     
     
 + (void)doSuccess:(NSURLSessionDataTask *)operation
@@ -294,70 +383,8 @@
     }
 
     
--(instancetype)init{
-    self = [super init];
-    if (self) {
-        sessionManager = [AFHTTPSessionManager manager];
-        [sessionManager.requestSerializer setTimeoutInterval:45];
-    }
-    return self;
-}
-    
--(AFHTTPSessionManager *)sessionManager{
-    return sessionManager;
-}
-    
-+(void)request:(NSString *)url method:(RequestMethod)method responseObjClass:(Class)clss params:(NSMutableDictionary *)params datas:(NSMutableDictionary *)datas success:(void(^)(NSString *msg, id datas))success failure:(void (^)(NSString *errMsg))failure{
-    
-    //获取请求对象，对返回数据处理
-    void (^successHandle)(int code, NSString *msg, id data) =^(int code, NSString *msg, id data){
-        if (clss == nil) {
-            success(msg, data);
-        }else{
-            if ([data isKindOfClass:[NSArray class]]) {
-                success(msg, [clss mj_objectArrayWithKeyValuesArray:data]);
-            }else{
-                id model = [clss mj_objectWithKeyValues:data];
-                if (model == nil) {
-                    success(msg, data);
-                }else{
-                    success(msg, model);
-                }
-            }
-        }
-    };
-    //失败处理
-    void (^failureHandle)(int code, NSString *msg) = ^(int code, NSString *errMsg){
-        failure(errMsg);
-    };
-    
-    if (datas.allKeys.count > 0) {
-        [self updateImage:url params:params datas:datas success:successHandle failure:failureHandle];
-    }else{
-        AFHTTPSessionManager *manager = [[self manager] sessionManager];
-        NSString *method = @"GET";
-        if (method == RequestMethodPost) {
-            method = @"POST";
-        }
-        NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:method URLString:url parameters:params error:nil];
-        request.timeoutInterval = 45; //设置超时时间
-        
-        NSURLSessionDataTask *task = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-            if (!error) {
-                [self doSuccess:nil responseObject:responseObject success:successHandle error:nil];
-            }else{
-#ifdef DEBUG
-                failure(error.userInfo.description);
-#else
-                failure(@"网络异常请稍后再试");
-#endif
-            }
-        }];
-        [task resume];
-    }
-}
-    
-    
+
+
 +(void)updateImage:(NSString *)url params:(NSMutableDictionary*)params datas:(NSMutableDictionary *)datas success:(void (^)(int code, NSString *msg, id data))success failure:(void (^)(int code, NSString *msg))error{
     //上传文件
     AFHTTPSessionManager *manager = [[KPengRequestMethod manager] sessionManager];
