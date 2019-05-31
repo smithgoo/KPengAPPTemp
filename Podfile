@@ -10,4 +10,5 @@ target 'KpengTemp' do
  pod 'SVProgressHUD'
  pod 'MJExtension'
  pod 'HRCocoaTools', '~> 0.2.8'
+# pod 'KPengIjkPlayer',:git=>'https://github.com/smithgoo/KPengIjkPlayer.git'
 end

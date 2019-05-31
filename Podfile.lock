@@ -74,7 +74,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   KPengUtils:
-    :commit: b94f2326a13d3ed790f244b5733685d87addfcae
+    :commit: 01c0dcaf41fb8b8f9fc0282274b44bc3b7dec7d6
     :git: https://github.com/smithgoo/KPengUtils.git
 
 SPEC CHECKSUMS:
@@ -86,6 +86,6 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 6017f43cad4edc7b0475c3b3494d1e84da12ae1a
+PODFILE CHECKSUM: 8bd87a9eb9548c6deef7dc53f8a71c4b4260462f
 
 COCOAPODS: 1.6.0.beta.2
